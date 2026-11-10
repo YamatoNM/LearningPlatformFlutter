@@ -1,0 +1,271 @@
+{
+  "homePage": {
+    "header": {
+      "greeting": "Hi, Kristin",
+      "subtitle": "Let’s start learning",
+      "avatarUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=160&q=80",
+      "notification": {
+        "hasUnread": true
+      }
+    },
+    "learnedToday": {
+      "title": "Learned today",
+      "learnedMinutes": 46,
+      "goalMinutes": 60,
+      "formatted": "46min / 60min",
+      "progress": 0.7667
+    },
+    "myCourses": {
+      "title": "My courses",
+      "actionLabel": "My courses"
+    },
+    "learningPrompt": {
+      "title": "What do you want to learn today?",
+      "actionLabel": "Get Started",
+      "imageUrl": "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=900&q=85"
+    },
+    "learningPlan": {
+      "title": "Learning Plan",
+      "items": [
+        {
+          "id": "packaging-design",
+          "title": "Packaging Design",
+          "completed": 40,
+          "total": 48,
+          "progress": 0.8333
+        },
+        {
+          "id": "product-design",
+          "title": "Product Design",
+          "completed": 6,
+          "total": 24,
+          "progress": 0.25
+        }
+      ]
+    },
+    "meetup": {
+      "title": "Meetup",
+      "subtitle": "Off-line exchange of learning experience",
+      "imageUrl": "https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=900&q=85"
+    }
+  },
+  "courses": [
+    {
+      "id": "react-front-to-back",
+      "title": "React Front To back",
+      "category": "Development",
+      "author": "Brad Traversy",
+      "duration": "6h 30min",
+      "durationMinutes": 390,
+      "lessonCount": 7,
+      "rating": 4.9,
+      "price": 0.0,
+      "isFavorite": true,
+      "hero": {
+        "label": "FRONTEND DEV",
+        "imageUrl": "https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=1000&q=85",
+        "videoCount": 75,
+        "classCount": 35
+      },
+      "description": "Master React from scratch. Learn components, state management, hooks, context API, custom hooks, and modern frontend design principles by building production-ready projects.",
+      "lessons": [
+        {
+          "id": "lesson-1",
+          "title": "Introduction to React",
+          "duration": "04:28",
+          "durationSeconds": 268,
+          "completed": true,
+          "locked": false
+        },
+        {
+          "id": "lesson-2",
+          "title": "Understanding React Fundamentals",
+          "duration": "06:12",
+          "durationSeconds": 372,
+          "completed": true,
+          "locked": false
+        },
+        {
+          "id": "lesson-3",
+          "title": "Create your first React project",
+          "duration": "43:58",
+          "durationSeconds": 2638,
+          "completed": false,
+          "locked": false
+        },
+        {
+          "id": "lesson-4",
+          "title": "Build & Deploy React Application",
+          "duration": "26:18",
+          "durationSeconds": 1578,
+          "completed": false,
+          "locked": true
+        },
+        {
+          "id": "lesson-5",
+          "title": "State Management & Hooks",
+          "duration": "18:40",
+          "durationSeconds": 1120,
+          "completed": false,
+          "locked": true
+        },
+        {
+          "id": "lesson-6",
+          "title": "Connecting REST APIs",
+          "duration": "32:15",
+          "durationSeconds": 1935,
+          "completed": false,
+          "locked": true
+        },
+        {
+          "id": "lesson-7",
+          "title": "Performance Optimization & Testing",
+          "duration": "22:10",
+          "durationSeconds": 1330,
+          "completed": false,
+          "locked": true
+        }
+      ]
+    },
+    {
+      "id": "packaging-design-mastery",
+      "title": "Packaging Design Mastery",
+      "category": "Design",
+      "author": "Elena Rostova",
+      "duration": "4h 15min",
+      "durationMinutes": 255,
+      "lessonCount": 48,
+      "rating": 4.8,
+      "price": 39.99,
+      "isFavorite": false,
+      "hero": {
+        "label": "CREATIVE DESIGN",
+        "imageUrl": "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?auto=format&fit=crop&w=1000&q=85",
+        "videoCount": 48,
+        "classCount": 12
+      },
+      "description": "Learn industrial and print packaging design from concept to production. Master dielines, 3D mockups, typography, and sustainable materials.",
+      "lessons": [
+        {
+          "id": "pd-1",
+          "title": "Fundamentals of Packaging",
+          "duration": "12:00",
+          "durationSeconds": 720,
+          "completed": true,
+          "locked": false
+        },
+        {
+          "id": "pd-2",
+          "title": "Dielines & 3D Prototyping",
+          "duration": "25:30",
+          "durationSeconds": 1530,
+          "completed": false,
+          "locked": false
+        }
+      ]
+    },
+    {
+      "id": "product-design-pro",
+      "title": "Product Design & UX Systems",
+      "category": "Design",
+      "author": "David Chen",
+      "duration": "8h 45min",
+      "durationMinutes": 525,
+      "lessonCount": 24,
+      "rating": 4.95,
+      "price": 49.99,
+      "isFavorite": true,
+      "hero": {
+        "label": "UX SYSTEM",
+        "imageUrl": "https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=1000&q=85",
+        "videoCount": 24,
+        "classCount": 8
+      },
+      "description": "Complete product design curriculum covering wireframing, user research, Figma component systems, interactive prototyping, and usability testing.",
+      "lessons": [
+        {
+          "id": "pdp-1",
+          "title": "User Centered Design Foundations",
+          "duration": "15:20",
+          "durationSeconds": 920,
+          "completed": true,
+          "locked": false
+        },
+        {
+          "id": "pdp-2",
+          "title": "Figma Tokens & Design Systems",
+          "duration": "34:10",
+          "durationSeconds": 2050,
+          "completed": false,
+          "locked": false
+        }
+      ]
+    },
+    {
+      "id": "flutter-bloc-state-management",
+      "title": "Flutter BLoC & Architecture",
+      "category": "Development",
+      "author": "Connie Robertson",
+      "duration": "5h 20min",
+      "durationMinutes": 320,
+      "lessonCount": 16,
+      "rating": 4.85,
+      "price": 59.99,
+      "isFavorite": true,
+      "hero": {
+        "label": "FLUTTER & DART",
+        "imageUrl": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=1000&q=85",
+        "videoCount": 32,
+        "classCount": 10
+      },
+      "description": "Learn to architect scalable mobile applications using BLoC and Cubit state management pattern in Flutter with async JSON loading, unit tests, and reactive UI states.",
+      "lessons": [
+        {
+          "id": "fb-1",
+          "title": "Streams & Reactive Programming",
+          "duration": "10:15",
+          "durationSeconds": 615,
+          "completed": true,
+          "locked": false
+        },
+        {
+          "id": "fb-2",
+          "title": "Cubit vs BLoC: When to use what",
+          "duration": "18:45",
+          "durationSeconds": 1125,
+          "completed": false,
+          "locked": false
+        }
+      ]
+    },
+    {
+      "id": "ai-machine-learning-basics",
+      "title": "AI & Prompt Engineering Basics",
+      "category": "AI",
+      "author": "Alex Rivera",
+      "duration": "3h 50min",
+      "durationMinutes": 230,
+      "lessonCount": 12,
+      "rating": 4.7,
+      "price": 0.0,
+      "isFavorite": false,
+      "hero": {
+        "label": "AI & ML",
+        "imageUrl": "https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&w=1000&q=85",
+        "videoCount": 18,
+        "classCount": 6
+      },
+      "description": "Introduction to generative artificial intelligence, LLM APIs, prompt engineering techniques, and integrating intelligent agents into applications.",
+      "lessons": [
+        {
+          "id": "ai-1",
+          "title": "Understanding Neural Networks & LLMs",
+          "duration": "14:00",
+          "durationSeconds": 840,
+          "completed": false,
+          "locked": false
+        }
+      ]
+    }
+  ]
+}

@@ -31,7 +31,7 @@ class ArtPlaceholder extends StatelessWidget {
       child: ClipRRect(
         borderRadius: BorderRadius.circular(radius),
         child: CustomPaint(
-          painter: _StripesPainter(color: textColor.withOpacity(0.06)),
+          painter: _StripesPainter(color: textColor.withValues(alpha: 0.06)),
           child: Center(
             child: Text(
               label,

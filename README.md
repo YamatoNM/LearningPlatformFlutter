@@ -1,17 +1,31 @@
-# learning_platform
+# Learnly - Laborator 3
 
-A new Flutter project.
+Aplicatie Flutter pentru invatare, construita modular cu `flutter_bloc` si
+incarcare asincrona a datelor din `assets/data.json`.
 
-## Getting Started
+## Functionalitati
 
-This project is a starting point for a Flutter application.
+- stari BLoC: initial, loading, success, empty si error;
+- lista de cursuri cu cautare dupa titlu, autor sau descriere;
+- filtrare dupa categorie si sortare dupa titlu, rating, pret sau durata;
+- adaugare/eliminare din favorite;
+- pagina de detalii cu lista de lectii si marcarea lectiilor finalizate;
+- ecran Home cu progresul de invatare si cursuri populare;
+- componente reutilizabile pentru carduri, loading, empty si error states.
 
-A few resources to get you started if this is your first Flutter project:
+## Organizare
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+- `lib/repositories/` - citirea asincrona a fisierului JSON;
+- `lib/models/` - modelele de date si conversia `fromJson`;
+- `lib/cubits/` - starea si operatiile asupra catalogului;
+- `lib/screens/` - Home, Courses si Course Details;
+- `lib/widgets/` - componente UI reutilizabile;
+- `assets/data.json` - datele aplicatiei.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Rulare
+
+```bash
+flutter pub get
+flutter run
+flutter test
+```
