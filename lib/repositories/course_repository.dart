@@ -8,7 +8,7 @@ class CourseRepository {
   CourseRepository({this.assetPath = 'assets/data.json'});
 
   /// Loads application data asynchronously from the asset JSON file
-  Future<AppData> loadAppData({Duration delay = const Duration(milliseconds: 600)}) async {
+  Future<AppData> loadAppData({Duration delay = const Duration(milliseconds: 1500)}) async {
     // Simulate real network/async loading latency to demonstrate Loading state
     if (delay > Duration.zero) {
       await Future.delayed(delay);

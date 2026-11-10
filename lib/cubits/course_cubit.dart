@@ -11,6 +11,7 @@ class CourseCubit extends Cubit<CourseState> {
   String _searchQuery = '';
   String _selectedCategory = 'All';
   SortOption _sortOption = SortOption.ratingDesc;
+  bool _favoritesOnly = false;
 
   CourseCubit({required this.repository}) : super(const CourseInitialState());
 
@@ -60,10 +61,16 @@ class CourseCubit extends Cubit<CourseState> {
     _applyFilterAndEmit();
   }
 
+  void toggleFavoritesOnly() {
+    _favoritesOnly = !_favoritesOnly;
+    _applyFilterAndEmit();
+  }
+
   /// Resets search query and category filters
   void clearFilters() {
     _searchQuery = '';
     _selectedCategory = 'All';
+    _favoritesOnly = false;
     _applyFilterAndEmit();
   }
 
@@ -111,6 +118,11 @@ class CourseCubit extends Cubit<CourseState> {
     List<CourseModel> result = List.from(_currentAppData!.courses);
 
     // 1. Filter by category
+    if (_favoritesOnly) {
+      result = result.where((course) => course.isFavorite).toList();
+    }
+
+    // 2. Filter by category
     if (_selectedCategory != 'All') {
       result = result
           .where((c) =>
@@ -118,7 +130,7 @@ class CourseCubit extends Cubit<CourseState> {
           .toList();
     }
 
-    // 2. Filter by search query
+    // 3. Filter by search query
     if (_searchQuery.trim().isNotEmpty) {
       final query = _searchQuery.trim().toLowerCase();
       result = result.where((c) {
@@ -129,7 +141,7 @@ class CourseCubit extends Cubit<CourseState> {
       }).toList();
     }
 
-    // 3. Sort results
+    // 4. Sort results
     switch (_sortOption) {
       case SortOption.titleAsc:
         result.sort((a, b) => a.title.toLowerCase().compareTo(b.title.toLowerCase()));
@@ -145,12 +157,13 @@ class CourseCubit extends Cubit<CourseState> {
         break;
     }
 
-    // 4. Emit Empty or Success state
+    // 5. Emit Empty or Success state
     if (result.isEmpty) {
       emit(CourseEmptyState(
         appData: _currentAppData!,
         searchQuery: _searchQuery,
         selectedCategory: _selectedCategory,
+        favoritesOnly: _favoritesOnly,
         message: 'No courses found for "$_searchQuery" in category "$_selectedCategory".',
       ));
     } else {
@@ -160,6 +173,7 @@ class CourseCubit extends Cubit<CourseState> {
         searchQuery: _searchQuery,
         selectedCategory: _selectedCategory,
         sortOption: _sortOption,
+        favoritesOnly: _favoritesOnly,
       ));
     }
   }
